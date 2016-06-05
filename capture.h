@@ -18,7 +18,7 @@ typedef enum {
   CAMERA_FAIL = 1,
   CAMERA_ERROR = 2,
 } camera_log_t;
-typedef void (*camera_log_func_t)(camera_log_t type, const char* msg, 
+typedef void (*camera_log_func_t)(camera_log_t type, const char* msg,
                                   void* pointer);
 
 typedef struct {
@@ -92,7 +92,7 @@ typedef union {
   uint8_t name[32];
   int64_t value;
 } camera_menu_t;
-  
+
 typedef struct {
   size_t length;
   camera_menu_t* head;
@@ -123,7 +123,7 @@ typedef struct {
   size_t length;
   camera_control_t* head;
 } camera_controls_t;
-  
+
 camera_controls_t* camera_controls_new(const camera_t* camera);
 void camera_controls_delete(camera_controls_t* controls);
 bool camera_control_get(camera_t* camera, uint32_t id, int32_t* value);
