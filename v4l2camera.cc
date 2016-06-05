@@ -373,6 +373,7 @@ namespace {
     }
     setUint(thisObj, "width", camera->width);
     setUint(thisObj, "height", camera->height);
+    setUint(thisObj, "format", camera->format);
     info.GetReturnValue().Set(thisObj);
   }
 

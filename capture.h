@@ -36,6 +36,7 @@ typedef struct {
   bool initialized;
   uint32_t width;
   uint32_t height;
+  uint32_t format;
   size_t buffer_count;
   camera_buffer_t* buffers;
   camera_buffer_t head;
@@ -49,6 +50,7 @@ bool camera_close(camera_t* camera);
 
 bool camera_capture(camera_t* camera);
 uint8_t* yuyv2rgb(const uint8_t* yuyv, uint32_t width, uint32_t height);
+int verify_jpeg_dht(uint8_t *src,  uint32_t lsrc, uint8_t **dst, uint32_t *ldst);
 
 
 typedef struct {
